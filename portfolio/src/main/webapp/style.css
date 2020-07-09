@@ -1,13 +1,9 @@
-@import url('https://fonts.googleapis.com/css?family=Roboto&display=swap');
-
-/* Main content */
 #content {
   margin-left: auto;
   margin-right: auto;
-  margin-top: 100px; /* Add a top margin to avoid content overlay */
   width: 650px;
 }
 
-#padding {
-    margin-top: 100px;
+#greeting-container {
+  margin-top: 20px;
 }
