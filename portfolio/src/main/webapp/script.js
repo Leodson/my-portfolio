@@ -26,3 +26,28 @@ function addRandomGreeting() {
   const greetingContainer = document.getElementById('greeting-container');
   greetingContainer.innerText = greeting;
 }
+
+function getMessage() {
+  fetch('/data').then(response => response.json()).then((quote) => {
+    document.getElementById('message-container').innerHTML = quote;
+  });
+}
+
+function generateComments() {
+  fetch('/data').then(response => response.json()).then((comments) => {
+    console.log(comments);
+    const comment_section = document.getElementById('comments');
+    for (var i = 0; i < comments.length; i ++) {
+      comment = createListElement(comments[i]);
+      comment.setAttribute('class', 'comment');
+      comment_section.appendChild(comment);
+    }
+  });
+}
+
+/** Creates an <li> element containing text. */
+function createListElement(text) {
+  const liElement = document.createElement('li');
+  liElement.innerText = text;
+  return liElement;
+}
