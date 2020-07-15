@@ -111,3 +111,10 @@ header {
 .experience-title:hover {
     color: gray;
 }
+
+.comment {
+    list-style: none;
+    border-bottom: black solid 1px;
+    padding: 5px;
+    margin: 5px;
+}
